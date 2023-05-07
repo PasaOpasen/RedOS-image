@@ -6,6 +6,12 @@ The main idea is gotten from next sources:
 * https://redos.red-soft.ru/base/arm/arm-other/docker-install/
 * https://www.dmosk.ru/miniinstruktions.php?mini=docker-base-image
 
+
+This repo link: https://github.com/PasaOpasen/RedOS-image
+
+Docker image link: https://hub.docker.com/repository/docker/pasaopasen/redos7.3/general
+
+
 ## Prerequirements
 * RedOS server version is installed on VBox
 * VBox guest additions is connected

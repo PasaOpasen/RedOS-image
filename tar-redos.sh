@@ -17,6 +17,7 @@ find / -type p -o -type c > exclude_types.txt
 #   * files with bad types
 #   * VBox Guest Additions
 #   * bash/python history
+#   * this repo git info and user git info
 #
 
 tar --numeric-owner \
@@ -25,5 +26,7 @@ tar --numeric-owner \
     --exclude-from="./exclude_types.txt" \
     --exclude='/opt/VBoxGuestAdditions*' \
     --exclude='~/*_history' \
+    --exclude='~/.git*' \
+    --exclude='/RedOS-image/.git' \
     -cvf redos73-base.tar 
 
