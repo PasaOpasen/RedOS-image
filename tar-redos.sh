@@ -7,8 +7,10 @@ cd /common
 # find all pipes and char files to exclude from image
 #   cuz some rootless docker versions can crash on loading because of them
 #
+# also remove python caches
+#
 
-find / -type p -o -type c > exclude_types.txt
+find / -type p -o -type c -o -name __pycache__ > exclude_types.txt
 
 #
 # tar whole system with some exclusions:
