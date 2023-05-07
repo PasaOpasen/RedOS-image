@@ -28,5 +28,5 @@ tar --numeric-owner \
     --exclude='~/*_history' \
     --exclude='~/.git*' \
     --exclude='/RedOS-image/.git' \
-    -cvf redos73-base.tar 
+    -cvf redos73-base.tar /
 
