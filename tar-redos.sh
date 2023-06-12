@@ -30,5 +30,8 @@ tar --numeric-owner \
     --exclude='~/*_history' \
     --exclude='~/.git*' \
     --exclude='/RedOS-image/.git' \
+    --exclude='/tmp/*' \
+    --exclude='/boot/*' \
+    --exclude='/usr/lib/modules/*' \
     -cvf redos73-base.tar /
 
