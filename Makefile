@@ -6,7 +6,7 @@
 #
 
 remove_old_kernels:
-	dnf -y remove --oldinstallonly kernel
+	dnf -y remove --oldinstallonly kernel || true
 
 clean_dnf_cache:
 	dnf autoremove -y && dnf clean all
