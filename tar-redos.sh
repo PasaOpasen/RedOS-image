@@ -33,5 +33,6 @@ tar --numeric-owner \
     --exclude='/tmp/*' \
     --exclude='/boot/*' \
     --exclude='/usr/lib/modules/*' \
+    --exclude='/var/log/*' \
     -cvf redos73-base.tar /
 
