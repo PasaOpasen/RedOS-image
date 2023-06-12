@@ -7,6 +7,11 @@ update:
 pack:
 	bash ./tar-redos.sh
 
+
+load:
+	bash ./load.sh
+
 push:
 	bash ./push.sh
 
+release: load push
