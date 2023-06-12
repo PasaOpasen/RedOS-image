@@ -25,6 +25,8 @@ prepare: update clean
 pack:
 	bash ./tar-redos.sh
 
+tar: pack
+
 #
 #
 # PUSHING
