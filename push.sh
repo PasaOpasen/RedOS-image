@@ -29,5 +29,7 @@ for tg in "${tag}" "latest"
 do
     name=pasaopasen/redos7.3:${tg}
     docker tag redos73-base $name
+    
+    echo "pushing ${name}"
     docker push $name
 done
