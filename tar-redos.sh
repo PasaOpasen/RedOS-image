@@ -20,6 +20,10 @@ find / -type p -o -type c -o -name __pycache__ > exclude_types.txt
 #   * VBox Guest Additions
 #   * bash/python history
 #   * this repo git info and user git info
+#   * /tmp
+#   * /boot
+#   * kernels
+#   * logs
 #
 
 tar --numeric-owner \
