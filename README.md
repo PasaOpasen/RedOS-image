@@ -17,6 +17,14 @@ Docker image link: https://hub.docker.com/repository/docker/pasaopasen/redos7.3/
 * VBox guest additions is connected
 * There is common folder `/common` between VM and main system
 
+## Base packages and VBox guest additions connection
+
+```bash
+dnf install gcc make kernel-headers kernel-devel git vim ncdu htop curl -y
+
+mount /dev/disk/by-label/VBox_GAs_7.0.6 /opt/VBoxGuestAdditions
+bash /opt/VBoxGuestAdditions/VBoxLinuxAdditions.run 
+```
 
 ## Commands
 
