@@ -1,7 +1,7 @@
 
 #
 #
-# UPDATING TAR
+# UPDATING TAR (usually from RedOS server)
 #
 #
 
@@ -29,7 +29,7 @@ tar: pack
 
 #
 #
-# PUSHING
+# PUSHING (usually from other operation system what has access to tar)
 #
 #
 
