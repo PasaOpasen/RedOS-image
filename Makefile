@@ -11,8 +11,11 @@ remove_old_kernels:
 clean_dnf_cache:
 	dnf autoremove -y && dnf clean all
 
+
 clean_python:
-    python -m pip cache purge && rm -rf ~/.cache
+    python -m pip cache purge
+
+# rm -rf ~/.cache
 
 clean: clean_dnf_cache clean_python
 
