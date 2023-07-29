@@ -15,7 +15,7 @@ clean_python:
     python -m pip cache purge
     rm -rf ~/.cache
 
-clean: clean_dnf_cache
+clean: clean_dnf_cache clean_python
 
 
 # update system packages
