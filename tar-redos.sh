@@ -10,7 +10,7 @@ cd /common
 # also remove python caches
 #
 
-find / -type p -o -type c -o -name __pycache__ > exclude_types.txt
+find / -type p -o -type c -o -type b -o -type s -o -name __pycache__ > exclude_types.txt
 
 #
 # tar whole system with some exclusions:
