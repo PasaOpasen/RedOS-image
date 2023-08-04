@@ -32,7 +32,6 @@ tar --numeric-owner \
     --exclude-from="./exclude_types.txt" \
     --exclude='/opt/VBoxGuestAdditions*' \
     --exclude='~/*_history' \
-    --exclude='~/.*_history' \
     --exclude='~/.git*' \
     --exclude='~/.cache' \
     --exclude='/RedOS-image/.git' \
@@ -40,9 +39,11 @@ tar --numeric-owner \
     --exclude='/var/tmp/*' \
     --exclude='/boot/*' \
     --exclude='/usr/lib/modules/*' \
-    --exclude='/var/log/*' \
-    --exclude='/dev/*' \
-    --exclude='/run/udev/links/*' \
-    --exclude='/run/systemd/journal/streams/*' \
+
     -cvf redos73-base.tar / | tee /common/in_image.txt
 
+    # --exclude='~/.*_history' \
+    # --exclude='/var/log/*' \
+    # --exclude='/dev/*' \
+    # --exclude='/run/udev/links/*' \
+    # --exclude='/run/systemd/journal/streams/*' \
