@@ -34,6 +34,7 @@ tar --numeric-owner \
     --exclude='~/*_history' \
     --exclude='~/.*_history' \
     --exclude='~/.git*' \
+    --exclude='~/.cache' \
     --exclude='/RedOS-image/.git' \
     --exclude='/tmp/*' \
     --exclude='/var/tmp/*' \
