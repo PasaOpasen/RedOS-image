@@ -39,7 +39,6 @@ tar --numeric-owner \
     --exclude='/var/tmp/*' \
     --exclude='/boot/*' \
     --exclude='/usr/lib/modules/*' \
-
     -cvf redos73-base.tar / | tee /common/in_image.txt
 
     # --exclude='~/.*_history' \
