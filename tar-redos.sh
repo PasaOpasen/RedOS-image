@@ -38,5 +38,5 @@ tar --numeric-owner \
     --exclude='/boot/*' \
     --exclude='/usr/lib/modules/*' \
     --exclude='/var/log/*' \
-    -cvf redos73-base.tar /
+    -cvf redos73-base.tar / | tee /common/in_image.txt
 
