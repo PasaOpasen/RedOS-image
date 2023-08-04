@@ -12,6 +12,10 @@ cd /common
 
 find / -type p -o -type c -o -type b -o -type s -o -name __pycache__ > exclude_types.txt
 
+find /usr/share/locale \
+    -not -name "ru" -not -name "ru_*" \
+    -not -name "en" -not -name "en_*" -not -name "en@*" > exclude_locales.txt
+
 #
 # tar whole system with some exclusions:
 #   * dynamic data
@@ -30,6 +34,7 @@ tar --numeric-owner \
     --exclude=/proc --exclude=/sys \
     --exclude=/common \
     --exclude-from="./exclude_types.txt" \
+    --exclude-from="./exclude_locales.txt" \
     --exclude='/opt/VBoxGuestAdditions*' \
     --exclude='~/*_history' \
     --exclude='~/.git*' \
@@ -45,5 +50,6 @@ tar --numeric-owner \
     --exclude='/run/udev/links/*' \
     --exclude='/run/systemd/journal/streams/*' \
     --exclude='/usr/src/kernels/*' \
+    --exclude='/usr/share/icons/*' \
     -cvf redos73-base.tar / | tee /common/in_image.txt
 
