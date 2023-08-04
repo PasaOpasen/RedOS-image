@@ -33,14 +33,14 @@ tar --numeric-owner \
     --exclude='/opt/VBoxGuestAdditions*' \
     --exclude='~/*_history' \
     --exclude='~/.git*' \
-    --exclude='~/.cache' \
     --exclude='/RedOS-image/.git' \
     --exclude='/tmp/*' \
-    --exclude='/var/tmp/*' \
     --exclude='/boot/*' \
     --exclude='/usr/lib/modules/*' \
     -cvf redos73-base.tar / | tee /common/in_image.txt
 
+    # --exclude='~/.cache' \
+    # --exclude='/var/tmp/*' \
     # --exclude='~/.*_history' \
     # --exclude='/var/log/*' \
     # --exclude='/dev/*' \
