@@ -37,12 +37,13 @@ tar --numeric-owner \
     --exclude='/tmp/*' \
     --exclude='/boot/*' \
     --exclude='/usr/lib/modules/*' \
+    --exclude='~/.cache' \
+    --exclude='/var/tmp/*' \
+    --exclude='~/.*_history' \
+    --exclude='/var/log/*' \
+    --exclude='/dev/*' \
+    --exclude='/run/udev/links/*' \
+    --exclude='/run/systemd/journal/streams/*' \
+    --exclude='/usr/src/kernels/*' \
     -cvf redos73-base.tar / | tee /common/in_image.txt
 
-    # --exclude='~/.cache' \
-    # --exclude='/var/tmp/*' \
-    # --exclude='~/.*_history' \
-    # --exclude='/var/log/*' \
-    # --exclude='/dev/*' \
-    # --exclude='/run/udev/links/*' \
-    # --exclude='/run/systemd/journal/streams/*' \
