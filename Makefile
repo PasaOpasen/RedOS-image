@@ -13,6 +13,7 @@ clean_dnf_cache:
 
 clean_python:
 	python -m pip cache purge
+	python2 -m pip cache purge
 	rm -rf ~/.cache
 
 clean: clean_dnf_cache clean_python
@@ -21,7 +22,8 @@ clean: clean_dnf_cache clean_python
 # update system packages
 update:
 	dnf update -y
-	python -m pip install --upgrade pip
+	python -m pip install --upgrade pip wheel setuptools cryptography
+	python2 -m pip install --upgrade pip wheel setuptools cryptography
 
 
 prepare: update clean
