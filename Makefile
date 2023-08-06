@@ -13,7 +13,7 @@ clean_dnf_cache:
 
 clean_python:
 	python -m pip cache purge
-	python2 -m pip cache purge
+	python2 -m pip cache purge || true
 	rm -rf ~/.cache
 
 clean: clean_dnf_cache clean_python
