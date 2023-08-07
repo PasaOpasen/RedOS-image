@@ -9,7 +9,8 @@ remove_old_kernels:
 	dnf -y remove --oldinstallonly kernel || true
 
 clean_dnf_cache:
-	dnf autoremove -y && dnf clean all
+	dnf autoremove -y
+	dnf clean all
 
 clean_python:
 	python -m pip cache purge
@@ -22,6 +23,7 @@ clean: clean_dnf_cache clean_python
 # update system packages
 update:
 	dnf update -y
+	mandb
 	python -m pip install --upgrade pip wheel setuptools cryptography
 	python2 -m pip install --upgrade pip wheel setuptools cryptography
 
