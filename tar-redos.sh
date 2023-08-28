@@ -1,3 +1,6 @@
+
+set -e
+
 #
 # change dir to common folder for this VM
 #

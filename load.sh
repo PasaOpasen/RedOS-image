@@ -1,3 +1,6 @@
+
+set -e 
+
 #
 # import tar from my paths as image
 #

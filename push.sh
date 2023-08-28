@@ -6,6 +6,7 @@
 #
 #
 
+set -e
 
 tag=$(date +"%Y-%m-%d_%H-%M")
 
