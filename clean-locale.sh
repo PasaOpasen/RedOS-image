@@ -7,9 +7,9 @@ set -x -e
 
 localedef --list-archive | grep -v -i -E '^(en|ru)' | xargs localedef --delete-from-archive
 
-mv /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.tmpl
+\mv /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.tmpl
 
 build-locale-archive
 
-yum reinstall glibc-common
+dnf reinstall glibc-common -y
 
