@@ -47,6 +47,7 @@ tar --numeric-owner \
     --exclude='/usr/lib/modules/*' \
     --exclude='/lib/modules/*' \
     --exclude='~/.cache' \
+    --exclude='/var/cache/*' \
     --exclude='/var/tmp/*' \
     --exclude='~/.*_history' \
     --exclude='/var/log/*' \
