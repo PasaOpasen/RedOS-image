@@ -56,5 +56,6 @@ tar --numeric-owner \
     --exclude='/run/systemd/journal/streams/*' \
     --exclude='/usr/src/kernels/*' \
     --exclude='/usr/share/icons/*' \
+    --exclude='/usr/lib/firmware' \
     -cvf redos73-base.tar / | tee /common/in_image.txt
 
