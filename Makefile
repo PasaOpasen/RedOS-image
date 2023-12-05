@@ -60,11 +60,13 @@ update-tar: prepare tar   ##@Update perform system updates and archiving
 #
 #
 
-load:                     ##@Docker load tar to Docker daemon
+dockerv:                  ##@Docker start Docker
 	sudo service docker start
+
+load:                     ##@Docker load tar to Docker daemon
 	bash ./load.sh
 
 push:                     ##@Docker push image to DockerHub
 	bash ./push.sh
 
-release: load push        ##@Docker load + push
+release: dockerv load push        ##@Docker load + push
