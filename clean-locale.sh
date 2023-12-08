@@ -3,10 +3,11 @@
 # https://unix.stackexchange.com/a/90016/532982
 #
 
-set -x -e
 
 echo -e 'After running this script u should manually call next command:\n\tdnf reinstall glibc-common -y'
 read -n 1 -p 'Press any key to continue...'
+
+set -x -e
 
 localedef --list-archive | grep -v -i -E '^(en|ru)' | xargs localedef --delete-from-archive
 
