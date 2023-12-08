@@ -69,4 +69,4 @@ load:                     ##@Docker load tar to Docker daemon
 push:                     ##@Docker push image to DockerHub
 	bash ./push.sh
 
-release: dockerv load push        ##@Docker load + push
+release: load push        ##@Docker load + push
