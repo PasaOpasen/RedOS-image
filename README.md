@@ -20,6 +20,7 @@ Docker image link: https://hub.docker.com/repository/docker/pasaopasen/redos7.3/
 Advices:
 * do not forget to set latin password on server installation
 * after installation the iso must be removed from VM
+* add VBoxGuestAdditions.iso as disk
 
 ## Base packages and VBox guest additions connection
 
