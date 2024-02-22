@@ -41,6 +41,7 @@ update:                   ##@Update update system and some python packages
 	mandb
 	python -m pip install --upgrade pip wheel setuptools
 	python -m pip install --upgrade cryptography
+	python2 -m ensurepip
 	python2 -m pip install --upgrade pip wheel setuptools
 	python2 -m pip install --upgrade cryptography
 
