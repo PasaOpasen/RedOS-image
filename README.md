@@ -27,6 +27,7 @@ Advices:
 ```bash
 dnf install gcc make kernel-headers kernel-devel git vim ncdu htop curl -y
 
+mkdir /opt/VBoxGuestAdditions
 mount /dev/disk/by-label/VBox_GAs_7.0.6 /opt/VBoxGuestAdditions
 bash /opt/VBoxGuestAdditions/VBoxLinuxAdditions.run 
 ```

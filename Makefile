@@ -39,8 +39,10 @@ clean: clean_dnf_cache clean_python clean_home
 update:                   ##@Update update system and some python packages
 	dnf update -y
 	mandb
-	python -m pip install --upgrade pip wheel setuptools cryptography
-	python2 -m pip install --upgrade pip wheel setuptools cryptography
+	python -m pip install --upgrade pip wheel setuptools
+	python -m pip install --upgrade cryptography
+	python2 -m pip install --upgrade pip wheel setuptools
+	python2 -m pip install --upgrade cryptography
 
 
 prepare: update clean     ##@Update update packages and clean cache
