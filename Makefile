@@ -73,3 +73,13 @@ push:                     ##@Docker push image to DockerHub
 	bash ./push.sh
 
 release: load push        ##@Docker load + push
+
+
+#
+#
+# UTILS
+#
+#
+
+run:
+	docker run -it redos73-base bash
