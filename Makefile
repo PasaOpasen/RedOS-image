@@ -24,9 +24,8 @@ clean_dnf_cache:          ##@Cleaning
 	dnf autoremove -y || true
 	dnf clean all
 
-clean_python:             ##@Cleaning python2/3 pip cache
+clean_python:             ##@Cleaning python3 pip cache
 	python -m pip cache purge
-	python2 -m pip cache purge || true
 	
 
 clean_home:               ##@Cleaning remove other caches
@@ -35,15 +34,10 @@ clean_home:               ##@Cleaning remove other caches
 clean: clean_dnf_cache clean_python clean_home
 
 
-# update system packages
 update:                   ##@Update update system and some python packages
 	dnf update -y
 	mandb
-	python -m pip install --upgrade pip wheel setuptools
-	python -m pip install --upgrade cryptography
-	python2 -m ensurepip
-	python2 -m pip install --upgrade pip wheel setuptools
-	python2 -m pip install --upgrade cryptography
+	python -m pip install --upgrade pip wheel setuptools cryptography
 
 
 prepare: update clean     ##@Update update packages and clean cache
