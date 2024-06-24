@@ -6,7 +6,7 @@ set -e
 #
 echo "import tar"
 
-file=$(cat tar-loc.txt)
+file=$(cat tar-location.txt)
 
 if [ ! -f $file ]
 then
