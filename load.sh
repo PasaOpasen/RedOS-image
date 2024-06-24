@@ -6,7 +6,7 @@ set -e
 #
 echo "import tar"
 
-file=/mnt/v/VirtualBoxes/common_folders/redos/redos73-base.tar
+file=$(cat tar-loc.txt)
 
 if [ ! -f $file ]
 then
