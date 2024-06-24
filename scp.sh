@@ -3,7 +3,7 @@
 #   to provide the case to load and push the image from it
 #
 
-set -e
+set -e -x
 
 path=$(cat remote-repo-path.txt | xargs)
 if [ -z "$path" ]
@@ -12,9 +12,13 @@ then
     exit 1
 fi
 
+server="${path%:*}"
+spath="${path#*:}"
+
 locname=tar-location.txt
 
-remote_tar_location=$(ssh $path realpath $locname)
+c="(cat $locname)"
+remote_tar_location=$(ssh $server "cd $spath && realpath \$$c")
 
 if [ -z "${remote_tar_location}" ]
 then
@@ -22,5 +26,5 @@ then
     exit 1
 fi
 
-scp $(cat $locname) ${remote_tar_location}
+scp $(cat $locname) $server:${remote_tar_location}
 
