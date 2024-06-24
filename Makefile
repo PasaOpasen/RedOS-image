@@ -60,6 +60,9 @@ update-tar: prepare tar   ##@Update perform system updates and archiving
 dockerv:                  ##@Docker start Docker
 	sudo service docker start
 
+scp:                      ##@Manage copy tar to remote server
+	bash ./scp.sh 
+
 load:                     ##@Docker load tar to Docker daemon
 	bash ./load.sh
 
