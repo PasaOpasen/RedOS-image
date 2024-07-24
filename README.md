@@ -1,3 +1,6 @@
+Archived because of [official images](https://redos.red-soft.ru/base/arm/arm-other/docker-install/) appearance 
+
+
 # RedOS-image
 
 This repo contains commands to build docker RedOS image from installed RedOS server version (current version is 7.3.4)
